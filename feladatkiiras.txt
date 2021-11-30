@@ -1,0 +1,7 @@
+Visszáru feladatokat támogató modul fejlesztése és illesztése Microsoft Dynamics 365 Business Central rendszerhez
+Egy olyan modul fejlesztése lenne, ami megkönnyít a visszáruk kezelését. A modulnak le kell tudnia szűkíteni a lehetséges visszárukat a megadott paraméterek alapján. 
+- Business Central megismerése, valamint a korábbi verziókkal, ERP rendszerek általánosságban
+- Fejlesztői környezet változás C/SIDE-ról VSCode-ra
+- Programozási alapok AL nyelv bemutatása, sajátosságai
+- C/AL programozi nyelv megismerése, alapok elsajátítása
+- Üzleti logika megismerése
