@@ -3,5 +3,5 @@ Egy olyan modul fejlesztése lenne, ami megkönnyít a visszáruk kezelését. A
 - Business Central megismerése, valamint a korábbi verziókkal, ERP rendszerek általánosságban
 - Fejlesztői környezet változás C/SIDE-ról VSCode-ra
 - Programozási alapok AL nyelv bemutatása, sajátosságai
-- C/AL programozi nyelv megismerése, alapok elsajátítása
+- C/AL programozási nyelv megismerése, alapok elsajátítása
 - Üzleti logika megismerése
