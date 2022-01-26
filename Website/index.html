@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="hu" >
+
+<head>
+
+  <title>Tóth Krisztián Önlab</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/custom.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="form.js"></script>
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Bevezetés</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">ERP</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+
+          <h1>Visszáru feladatokat támogató modul fejlesztése és illesztése Microsoft Dynamics 365 Business Central rendszerhez</h1>
+
+
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>1.  Bevezetés</h2>
+          <p class="lead">
+Az ERP az adott vállalatnál felmerülő valamennyi információfeldolgozást és az egész vállalatra kiterjedő integrációt megvalósító, egységes információs rendszer. Régebben egy vállalatnál mindegyik osztály „külön” életet élt, kevesebb volt az iteráció az egyes osztályok között, más volt a munkakörnyezet és más informatikai megoldásokat használtak. Egymástól működő rendszerek alakultak ki melyek a vállalat működésének egy-egy részterületét támogatták (gyártás, munkaügy, könyvelés stb.). Az ERP rendszer az egyes területeken keletkező adatok gyűjtését, tárolását, kezelését, feldolgozását és értelmezését teszi lehetővé összvállalati, vagy akár vállalatcsoporti szinteken is. Egy ERP szoftver nyomon követi a szervezet erőforrásait, mint például az emberi erőforrás, készletek, alapanyagokat, megrendeléseket, költségeket is. Megkönnyíti az információ áramlást a belső és akár a külső szereplők között. Első találkozásom az ERP rendszerekkel a vállal átirányítási rendszerek 1 során történt. Itt az alapokat sikerült elsajátítani. A gyakorlatokon a Microsoft NAV-val foglalkoztunk. A szakmai gyakorlatom során pedig egy régebbi SAP rendszerrel volt szerencsém találkozni, így betekintést nyerhettem egy multinacionális vállalat mögött álló ERP rendszer összetettségére és arra, hogy mekkora hatással bír egy ilyen rendszer, ez felkeltette az érdeklődésem a téma iránt és motivált az, hogy ezzel foglalkozzam az önálló labor tárgy, valamint később szagdolgozat szintjén is. A célom az önálló labor tárgy keretein belül, hogy a jelenlegi tudásom kibővítve új ismereteket szerezzek, amiket a jövőben is fel tudok használni, ezért is döntöttem a Microsoft Dynamics 365 mellett. Célom továbbá az, hogy megismerjem az AL programozási nyelvet és annak használatát. A Microsoft Dynamics 365 2016-ban jelent meg ez még a jelenlegi gyors iramot diktáló felhő alapú világban is fiatalnak számít tehát jelenleg is megéri ezzel foglalkozni. Eddigi tanulmányaim során rengeteg programozási nyelven ismerkedtem meg viszont még nem volt szerencsém ebben a programozási nyelvben dolgozni ez is egy új ismeret lesz a számomra. A végső cél egy olyan modul fejlesztése lenne, ami megkönnyít a visszáruk kezelését. A modulnak le kell tudnia szűkíteni a lehetséges visszárukat a megadott paraméterek alapján. 
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <h2>2. ERP</h2>
+          <p class="lead">
+            Az ERP szoftverek legjelentősebb előnye, hogy különálló, széttagolt, egyedi megoldások helyett egy egységes rendszerben kezeli a szervezet szinte összes folyamatát és egy adatbázisban tárolja a szervezet összes adatát. Az egyes szervezeti egységek működése ezáltal könnyebbé válik, valamint könnyebbé válik az is, hogy a folyamatokat hatékonyan nyomon kövessek. A vállalat gyorsabban fel tudja ismerni a változásokat, és segíti a döntéshozatalban.
+          </p>
+          <h3>2.1 Nyílt forráskódú rendszerek</h3>
+           <p class="lead">
+          Rengeteg nyílt forráskódú ERP rendszer létezik, amelyek nagy előnye, hogy nagyobb szabadságot biztosít a zárt fizetős ERP rendszerekkel szemben. A zárt fizetős rendszerek esetében a tulajdonos nem bocsátja rendelkezésre a forráskódot, ami miatt, ha valamilyen egyedi igény merül fel a rendszerrel kapcsolatban kénytelen a felhasználó fizetni érte. A nyílt forráskódú ERP rendszer esetén hozzá lehet férni a kódhoz, ami lehetőséget biztosít arra, hogy igény szerint módosítani lehet azt.
+A költség ilyenkor is egy fontos tényező a nyílt forráskódú ERP rendszerek és a fizetős zárt rendszerek között. A licenszelésnek nincs költésége és a felhasználó hozzáférést kap a forráskódhoz ingyenesen. Viszont van olyan szolgáltató, amelyik havidíjért cserébe nyújt szolgáltatásokat, mint például hosting, IT támogatás.
+A nyílt forráskódú ERP szoftverek főleg olyan növekvő vállalkozásnak lehet kedvező, amely limitált forrássokkal rendelkezik. Ezek a rendszerek nagyobb rugalmasságot biztosít a vállalatoknak, hogy kibővítsék vagy módosítsák akkor amikor szeretnék.
+Előnyök:
+
+
+
+<ul class="lead">
+          <li>Költségek: Nyílt forráskódú ERP esetén általában nincs, de lehet licenszelésnek költsége, ez függhet felhasználók számától. Az üzemeltetés is lehetséges külső szolgáltató nélkül. Ha szükséges lehet választani olyan szolgáltatót, aki a szoftvert, mint szolgáltatás (SaaS) ajánlja. A SaaS modell nagy általánosságban egy havidíjas szolgáltatás.</li>
+          <li>Skálázhatóság: Mivel az ERP rendszerek nagyobb befektetések, ezért gondolni kell a jövőre is. Ahhoz, hogy ez a befektetés hosszú távon működni tudjon, a rendszernek együtt kell bővülnie a vállalattal. Mivel szabadon módosítható a rendszer ez nem jelent gondot.</li>
+          <li>Személyre szabhatóság: A kód közvetlen elérésével nem kell az alap funkciókra támaszkodni, vagy fizetni extrákért.</li>
+          <li>Közösség: Mint minden nyílt forráskód esetében, lehet számítani a közösség támogatására. A közösség segítséget tud nyújtani a hibák elhárításában vagy éppen abban, hogy új funkcióval lehessen ellátni a rendszert.</li>
+</ul>
+Hátrányok
+  </p>
+<ul class="lead">
+          <li>IT csapat: Egy ERP rendszer bevezetése erőforrás igényes és egy képzett csapatot igényel. Egy olyan vállalat amelyik nem rendelkezik a szükséges IT részleggel nehézségebe fog ütközni a rendszer bevezetésénél és üzemeltetésénél, amennyiben nem SaaS szolgáltatás választ. Nem csak az üzemeltetés esetében, hanem akkor is szükséges a megfelelő IT részleg, ha bármilyen szintű módosítás kell végrehajtani.</li>
+          <li>Összetettség: Ha nem megfelelően fejlesztik a rendszer könnyedén túl összetett és nehezen fejleszthetővé válhat. Ez a hátránya annak, hogy szabadon bele lehet nyúlni a forráskódba.</li>
+          <li>Veszélyek: Mivel ingyenes rendszerekről van szó könnyen lehet, hogy a rendszert fejlesztő vállalat csődbe megy.</li>
+          <li>Megbízhatóság: A nyílt forráskódú ERP rendszerek megbízhatósága és rendelkezésre állása messze nem annyira tökéletes, mint a fizetősöké.</li>
+</ul>
+<p class="lead">
+A legelterjedtebb nyílt forráskódú ERP rendszer az Odoo. Az Odoo többek között a következő modulokat tartalmazza: CRM (Customer-Relationship-Management, azaz ügyfélkapcsolat-kezelési rendszer), weboldal/e-kereskedelem, számlázás, pénzügyi számvitel, termelés, készletkezelés, projektkezelés, dokumentumkezelés. A közösségnek
+itt nagy szerepe van, rengetek fizetős, valamint szabad letölthető fejlesztés közül lehet válogatni. 
+</p>
+ <p style="text-align:center;">  <img class="img-fluid" src="img/kep1.png" alig alt="1. ÁBRA ODOO (FORRÁS: HTTPS://WWW.ODOO-BS.COM/APPS)"></p>
+ <p class="lead">
+A Metafresh egy másik népszerű nyílt forráskódú ERP rendszer főleg kis és közép vállalkozásoknak. Könnyen hostolható, a felhasználó által is. Az összes nagyobb operaciós rendszert támogatja, mint a Windows, Linux, IOS, Android. Olyan nyelveken érthető el, mint SQL, Java, XML vagy JavaScript. 
+</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>   
+   <div class="container">
+
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+         
+            <h2>3. Buisness Central</h2>
+            <h2>3.1. Microsoft Dynamics</h2>
+               <p class="lead">
+            A Buisness Central a Microsoft Dynamics NAV-ból fejlődött ki. Ez az ERP rendszer a világon
+piacvezető a kis és középvállalkozások között. A Navision ERP rendszer 1987-ben jelent meg,
+majd 1995 a Microsoft Windowsra is. A Microsoft 2002-ben zárta le a Navision megvásárlását,
+majd pár évvel később a nevét Microsoft Dynamics NAV-ra változtatta.
+A Microsoft Dynamics komplett üzleti csomagokat kínált. Ezzel lefedte a vállalati
+szükségleteket a Microsoft Dynamics AX révén. A kis és közép vállalkozásokat Microsoft
+Dynamics NAV-al, és az ügyfélkapcsolat-kezelést Microsoft Dynamics CRM-mel.
+2008-ban lecserélték a két rétegű kliens-szerver felépítést és sokkal jobban skálázható és
+hatékonyabb a ma jól ismert három rétegű architektúrára. Az elkülönült az üzleti logikát a
+Windows Communication Framework-n keresztül a Microsoft Dynamics NAV Szerver fútatta.
+2013-ban érte el az első nagyobb mérföldkövet a felhő szolgáltatások terén a Microsoft
+Dynamics NAV 2013 R2 megjelenésével. Az Infrastruktúra, mint szolgáltatás bevezetésével a
+Microsoft Azure Virtuális számítógépeivel, a Microsoft Dynamics NAV rendelkezésére álltak
+azok PowerShell scriptek amikel könnyedén lehet telepíteni és konfigurálni Microsoft
+Dynamics NAV-ot a virtuális számítógépeken.
+2015 végén Microsoft Dynamics NAV 2016 volt az első verzió, aminél megjelent a havidíjas
+lehetőség, valamint az, hogy az egyedi fejlesztések modulokra bontása. Amivel nem kellett az
+alap kódba nyúlni. Ennél a verziónál jelentek meg a kiterjesztések. Ebben a verzióban jelent
+meg az eseménykezelés, ami annyit takar, hogy ha egy adott esemény bekövetkezik, akkor
+lefut annak az objektumnak a kódja, amelyre az esemény bekövetkezett.
+Microsoft Dynamics NAV-ot megvásárolható volt PaaS-ban a partnerek számára. Ez azt jelenti,
+hogy az applikáción kívül mindent a szolgáltató futtat és menedzsel.
+A következő nagy lépés a Microsoft Dynamics NAV esetében SaaS bevezetése volt.
+          </p>
+           <h2>3.1. Microsoft Dynamics</h2>
+   <p class="lead">
+    A több vállalati kiszolgálás a kulcs technológia, ami a Microsoft Dynamics 365 Business Centralt
+rugalmassá és skálázhatóvá teszi. Lehetővé teszi, hogy könnyedén lehessen hozzáadni új
+ügyfeleket projektekhez. Így gyorsabban lehet frissítéseket publikálni, ezáltal csökkentve a
+leállást. Ebben a felépítésben a Business Central alkalmazás külön adatbázisokban van tárolva. 
+    </p>
+    <p style="text-align:center;">  <img class="img-fluid" src="img/kep2.png" alig alt="2. ÁBRA MULTITENANT DEPLOYMENT (FORRÁS: HTTPS://DOCS.MICROSOFT.COM/EN-US/DYNAMICS365/BUSINESS-CENTRAL/DEV-ITPRO/DEPLOYMENT/MULTITENANT-DEPLOYMENT-ARCHITECTURE)"></p>
+        </div>
+      </div>
+    </div>
+</section>
+  <section id="contact"  class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+           <h2>4. On-premises és SaaS</h2>
+               <p style="text-align:center;">  <img class="img-fluid" src="img/kep3.png" alig alt="3. ÁBRA PAAS VS IAAS VS SAAS  (FORRÁS: HTTPS://WWW.REDHAT.COM/EN/TOPICS/CLOUD-COMPUTING/WHAT-IS-PAAS)"></p>
+           <p class="lead">
+A Microsoft Dynamics NAV és a Microsoft Dynamics 365 Buisness Central hasonló tulajdonságokkal rendelkeznek.  A különbség telepítésben van, a rendszer helyben fusson vagy pedig a felhőből?
+             </p>
+ <h2>4.1 Infrastruktúra, fenntartás, elérhetőség</h2>
+ <p class="lead">Microsoft Dynamics NAV esetén szükség van a megfelelő hardverre és szoftverre, hogy garantálható legyen a megfelelő rendelkezésre állás. Szükséges még a megfelelő IT személyzet, hogy üzemeltesse, szükség esetén bővítse a hardver állományt és frissítse a szoftvereket.
+Microsoft esetében 5 éves ciklusokok vannak, tehát 5 évig támogatja a Microsoft az élettartamot.
+Microsoft Dynamics 365 Buisness Central esetében nincs külön költség a beüzemelés terén, a pay-as-you-go fizetéssel. Az ügyfél a vállalata igényei alapján kiválasztja, hogy milyen modulok kellenek számára.
+Nincs költsége a fenttartásnak, a Microsoft garantálja a megfelelő szoftvereket, a szinte folyamatos rendelkezésre állást.</p>
+ <h2>4.2 Biztonság</h2>
+      <p class="lead">
+        A vállalatok, amik helyben tárolják az adatokat, teljes rálátásuk van a rendszerre az adatok olvasása, karbantartása értelmében. A helyi IT csapat felelős azért, hogy biztonságban legyenek azok az adatok. Folyamatos figyelni és fenn kell tartani az adatok biztonságát és védelmét.
+Ugyan ezek a szabályok érvényesek SaaS esetén is. 
+Nincs más olyan szolgáltató, aki garantálni a magasabb szintű biztonsági eljárásokat, mint a Microsoft Cloud. </p>
+ <h2>4.3 Teljesítmény</h2>
+ <p class="lead">A Microsoft Dynamics NAV teljesítménye az implementálástól függ. Az ügyfélnek kell meghoznia a döntést, hogy milyen hardverekkel látja el a rendszerét, a költségeket figyelembe véve.
+Az ügyfélnek saját felelőssége, hogy a rendszer megfelelően és kellő gyorsasággal működjön,
+Microsoft Dynamics 365 Business Central esetén egy jól bejáratott rendszer kap az ügyfél. Microsoft Dynamics 365 Business Central magas szintű felügyelettel van ellátva, mint hardver, mint szoftver szinten. A Microsoft mérnökei gyorsan meg tudják oldani a teljesítménnyel kapcsolatban felmerülő problémákat, amennyiben a probléma forrása a Microsoft szolgáltatásával van. </p>
+ <h2>4.4 Skálázhatóság</h2>
+      <p class="lead">A helyben telepített rendszereket úgy kell megtervezni, hogy azok ki tudják szolgálni a szezonális vagy a periodikusan megugró igényeket.
+Mivel a projectek rajtja több hónapot is igénybe vehet figyelembe kell venni, hogy addigra változhat az adatok mennyisége és minősége. Ezért a projekt felelőseinek változtatnia kell az alkalmazáson kód szinten, az infrastruktúrán hardveresen,
+Microsoft Dynamics 365 Business Central esetében rendelkezésre állnak a szükséges erőforrások és a Microsoft Azure Cloud folyamatosan figyeli a rendszer szükségleteit.</p>
+ <h2>4.5 Fejleszthetőség</h2>
+    <p class="lead">A Microsoft Dynamics NAV architecturával, a partnerek és az ügyfelek saját maguk irányítják és felügyelik az infrastruktúrát és az applikáció fejlesztéseit. Ők döntik el mit és mikor szeretnének fejleszteni. Egyértelmű, hogy ilyenkor a költségeket és az erőforrásokat a partnereknek és az ügyfeleknek kell biztosítani.
+A Microsoft Dynamics 365 Buinsiess Central estében a partnerek, ügyfelek nagyrészben a saját napi feladatiakkal tudnak foglalkozni. A hardveres és szoftveres fejlesztések periodikusan történnek, átláthatóan és szinte leállások nélkül SAAS esetén. 
+</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section>   
+   <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">      
+            <h2>5.  Fejlesztői környezetek, technológiák</h2>
+               <p class="lead">
+           <h2>5.1 C/SIDE</h2>
+   <p class="lead">
+A C/SIDE egy fejlesztői környeztet a saját üzemeltetésű Buisness Centeral és Microsoft Dynamics NAV-hoz, ami a Navision kliens szoftverjébe van integrálva. Buisness Central esetében a C/SIDE 14. verzióig volt támogatott. A C/SIDE a Client/Server Integrated Development Environment rövidítése. A C/SIDE a NAV első verziójához készült, hozzáférést biztosít az összes NAV objektumhoz, és az alkalmazás teljes egészét személyre szabható vele. A C/SIDE a C/AL-al együtt fejlődött és folyamatosan került bele az új funkciók. A Microsoft Dynamics NAV-és a C/SIDE-on belül teljesen megváltoztathatóak a rendszer alapfunkciói. Ez az nagyon nagy előny egy nagyon nagy hátránnyal is jár mivel ezt nehéz folyamatosan üzemeltetni évekkel később. Emiatt az újabb verziókra való átállás időigényesebb és költségesebb.  C/SIDE előnyei:
+    </p>
+    <ul class="lead">
+          <li>Grafikai felületet, amelyen látható és szerkeszthető az objektumok metaadatai. Közvetlenül megtekinthetőek a kiválasztott objektumok tulajdonságai.</li>
+          <li>Exportálható és importálható bináris objektumok.</li>
+          <li>Több ezer objektummal való munka. Az Object Designer olyan funkciók vannak, mint a fájlok másolása, breakpontok elhelyezése, debugger futtatása, metaadatok szinkronizálása stb. Az Excel stílusú megjelenítésnek köszönhetően produktívan lehet vele dolgozni.</li>
+</ul>
+ <h2>5.2  Visual Studio Code</h2>
+       <p class="lead">A Visual Studio Code egy integrált fejlesztő környezet, amit a Microsoft hozott készített Windows, Linux és MacOS operációs rendszerekre. A Visual Studio Code olyan funkciók találhatóak meg mint, debugolás, szintakszis kiemelés, refactoring és beágyazott Git. A Microsoft, megosztotta a Visual Studio Code kódjának a nagyrészétét GitHub-on. A Visual Studio Code 2015-ben jelent meg MIT licensz alatt.
+A Visual Studio Code rengetek fajta programozási nyelvet használhatunk, mint például, Java, JavaScript, Go, Node.js, Python, C/AL, vagy éppen a C++. A Visual Stuido Code-hoz rengeteg bővítmény tartozik. Ahhoz, hogy Buisness Central-ban fejleszteni lehessen szükség van bővítményre.
+Míg a C/SIDE a helyben futtatott rendszerekre van kihegyezve, a VS Code a web és a felhő alapú applikációk fejlesztése miatt jött létre. A VS Code-ban való kódolás egyszerű, gyors és hatékony. Nincs grafikus interfész, hogy megjelenítsen metaadatokat mint a C/SIDE esetében. Projektek helyett mappák és fájlok vannak. Támogatja a verziókezelést, ami hatalmas előny a C/SIDE-al szemben.
+</p>
+ <h2>5.3  C/AL</h2>
+   <p class="lead">A nyelv, amit a Buisness Central használ az a C/AL (Client/server Application Language). A C/AL szintakszisa hasonló a Pascalé-hoz. A C/AL egy robosztus programozási nyelv, ami arra lett tervezve, hogy személyre szabható és kibővíthető legyen az ERP alkalmazás. A nyelvet csak a Microsoft Dynamics NAV-ban használjuk. A C/AL nyelv nem tekinthető objektum orientált nyelvnek, csak az előredefiniált objektumokat használja:</p>
+       <ul class="lead">
+          <li>Tábla: Tárolja az adatokat</li>
+          <li>Form: Megjeleníti az adatokat</li>
+          <li>Report: Megjeleníti az adatokat, a képernyőn vagy nyomtatott formában</li>
+          <li>Dataport: Adatok importálása és exportálása fájlokból/ba</li>
+          <li>XMLport: Hasonló, mint a Dataport de csak XML formátumhoz</li>
+          <li>Codeunit: Tartalmazza a kódot</li>
+          <li>MenuSuite: Menükből áll, más struktúrájú a többi objektumoktól</li>
+</ul>
+ <h2>5.4  AL</h2>
+   <p class="lead">Az Application programozási nyelv, amivel a Microsoft Dynamics 365 Business Centralt fejleszthetjük. Az AL segítségével kezelhetjük az adatokat, függvények segítségével olvashatóak, írhatóak az adatok a Buisness Central adatbázisában. 
+Az AL segítségével ráhatásunk van az objektumok megvalósítására és a felhasználóval való interakciókra. Az AL-nek rengeteg előre definiált függvénye van, amiket fel lehet használni a fejlesztés során, illetve írhatunk saját magunk is egyedi függvényeket.
+Az AL-ben lehetnek esemény triggerek és függvény triggerek. Minden objektumnak (Table, Page, CodeUnit, Report, stb) van esemény vezérelt triggere, ezeknek a neve On-nal kezdődik. Ezek akkor futnak le, ha egy esemény megtörténik, ilyen esemény például a törlés, módosítás, létrehozás. Az események száma függ az objektum típusától.
+Létrehozhatunk saját függvényeket az objektumokhoz, ezek elérhetőek lesznek az objektumok függvény triggerei által-Ezek a metódusok.
+Mint sok más programozási nyelvben, AL-ben is felvehetünk változókat, amiket használni lehet a függvényekben, vagy átmenetileg adatokat is lehet bennük tárolni.
+</p>
+        </div>
+      </div>
+    </div>
+</section>
+  <section id="contact"  class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+           <h2>6. Üzleti logika</h2>
+               <h2>6.1  Visszáruk kezelése Business Centralban</h2>
+           <p class="lead">
+            Ha egy vásárló vissza szeretne küldeni egy terméket vagy szeretné, ha megtérítenék az árát a terméknek, amit eladtunk neki és megkaptuk érte az összeget, akkor létre kell egy eladás jóváírást, amiben specifikáljuk a kért változtatásokat a rendeléssel kapcsolatban Ahhoz, hogy a megfelelő adatokkal hozzuk létre kétféle lehetőségünk van létrehozni. Létrehozható közvetlenül az elküldött termék számlájáról, vagy pedig a számla adatainak a másolatáról. 
+          A visszaküldés vagy visszatérítés lehetséges, hogy csak néhány termékre vonatkozik nem pedig mindenre, ami a számlán szerepel. Ebben az esetben szerkeszteni kell ezeket az információkat a eladás jóváírás vagy pedig a visszaáru rendelés esetében. Amikor létrehozzuk ezeket, lehetőség nyílik arra, hogy visszaadjuk a vásárlónak a pénzét.
+        Ahogy már említve volt lehetőség van arra, hogy a visszáru nyugtáit kombináljuk, ez akkor lehetséges, ha a vásárló több terméket küld vissza különböző visszaáru rendelésből. Amikor visszaérkeznek a termékek a raktárunkba, megjelöljük azokat a visszaáru rendeléseket megérkezettként, ez pedig létrehozza a visszáru nyugtát. Amikor készen állunk, hogy számlázzunk a vásárlónak ahelyett, hogy minden visszaáru rendelés egyesével számláznánk, létrehozható egy eladás jóváírás és automatikusan másolja létrehozott nyugták sorait a dokumentumba.</p>
+ 
+    <h2>6.1.1  Eladás jóváírás létrehozása számla alapján</h2>
+           <ul class="lead">
+          <li>1.  Első lépésként megnyitjuk a Posted Sales Invoices oldalt.</li>
+          <li>2.  Következő pedig az lesz, hogy ki kell választani azokat a számlákat, aminél eladás jóváírást szeretnénk elvégezni. Ezután pedig a Correct menüpontra kattintva megláthatjuk a Create Corrective Credit Memo-t. </li>
+</ul>
+    <p style="text-align:center;">  <img class="img-fluid" src="img/kep4.png" alig alt="5. ÁBRA CREATE CORRECTIVE CREDIT MEMO (FORRÁS: SAJÁT ÁBRA)"></p>
+           <ul class="lead">
+          <li>3.  A Sales Credit Memo már tartalmaz adatokat az előző oldalról. Ezek szerkeszthetőek és új információkkal is kiegészíthető. Miután a megfelelő információkkal kiegészítettük például átírtuk a mennyiséget a termék számánál arra amennyit jóvá szeretnénk írni. </li>
+</ul>
+ <p style="text-align:center;">  <img class="img-fluid" src="img/kep5.png" alig alt="6. ÁBRA SALES CREDIT MEMO (FORRÁS: SAJÁT ÁBRA)"></p>
+            <ul class="lead">
+          <li>4.  A Prepare feliratra kell kattintani majd pedig az alatta megjelenő Apply Entries-re.</li>
+          <li>5.  Itt ki kell választani azokat a sorokat, amelyekre szeretnénk érvényesíteni a jóváírást. A Process-en belül a Set Applies-to ID-t kell kiválasztani, ezt szúrjuk be a kívánt sorba. Az oldal álján található egy összesítés néhány információval.</li>
+          <li>6.  A következő az, hogy az OK gombra kattintunk. </li>
+
+</ul> 
+<p style="text-align:center;">  <img class="img-fluid" src="img/kep6.png" alig alt="7. ÁBRA SET APPLIES ID BESZÚRÁSA (FORRÁS: SAJÁT ÁBRA)"></p>
+            <ul class="lead">
+          <li>7.  Posting-ra majd pedig a Post and Send-re kell kattintani és készen is van.</li>
+        
+</ul>
+    <h2>6.1.2 Eladás jóváírás létrehozása számla másolásával</h2>
+                <ul class="lead">
+          <li>1.  Megnyitjuk a Sales Credit Memos nevezetű listát. </li>
+          <li>2.  A New feliratra kattintva létrehozunk egy új jóváírást. Ez ugyan az az oldal, mint amin az előző pontban dolgoztunk csak most nincs kitöltve.</li>
+          <li>3.  A Customer Name mezőben megkeressük a várásló nevét</li>
+          <li>4.  A Prepare felíratva kattintva kiválasztjuk a Copy Sales Document Page-et</li>
+          <li>5.  A Document Type legördülő menüben ki kell választani azt, hogy Posted Invoice.</li>
+          <li>6.  A Document No. mezőben megkeressük azt számlát amire létre akarjuk hozni a jóváírást. </li>
+          <li>7.  Kiválaszthatjuk a Recalculate Line box, hogyha a termék ára időközben változott és szeretnénk frissíteni az árat az eddigi számlák esetében.</li>
+</ul> 
+<p style="text-align:center;">  <img class="img-fluid" src="img/kep7.png" alig alt="8. ÁBRA COPY SALES DOKUMENT"></p>
+                <ul class="lead">
+          <li>8.  Az OK gombra kattintva, a BC kitölti nekünk az adatokat a kiválasztott számla alapján.</li>
+          <li>9.  Az előző pontban felsorolt lépéseket kell végrehajtani.</li>
+</ul> 
+<h2>6.1.3 Kompenzáció</h2>
+  <p class="lead">
+  Kompenzálhatjuk a vásárlónkat, ha a terméket sérülten, kifogásolhatóállapotban vagy esetleg késve kapta meg. </p>
+                  <ul class="lead">
+          <li>1.  Megnyitjuk a Sales Credit Memos nevezetű listát</li>
+          <li>2.  A New feliratra kattintunk. </li>
+          <li>3.  Kitöltjük a vásárlónak az adatait.</li>
+          <li>4.  Az adatok alatt található listában a típus mezőben a Charge (Item) típust választjuk ki.</li>
+          <li>5.  A No. mezőben a Sales Allowance kell kiválasztani.</li>
+          <li>6.  A Quantity mezőbe 1-et kell beírni. </li>
+          <li>7.  Unit Price Excl. Tax mezőbe pedig a kompenzáció mértéket. </li>
+</ul> 
+<p style="text-align:center;">  <img class="img-fluid" src="img/kep8.png" alig alt="9. ÁBRA KOMPENZÁCIÓ (FORRÁS: SAJÁT ÁBRA)"></p>
+<h2>6.1.4 Visszáru rendelés</h2>
+  <p class="lead">Amennyiben nagyobb ellenőrzésre van szükség a visszáru folyamatáról, ide tartozik például a raktári dokumentumok, de olyan is előfordulhat, hogy több visszaárut kapunk több dokumentummal ugyan arról a helyről. A visszaáru rendelést segítségével tudjuk kezelni ezeket a problémákat, valamint a termék cseréjét, ha szükséges.</p>
+                    <ul class="lead">
+          <li>1.  Megnyitjuk a Sales Return Order Listát</li>
+          <li>2.  New feliratra kattintva létrehozunk egy új visszárurendelést. </li>
+          <li>3.  Kitöltjük az általános adatokat</li>
+          <li>4.  Több lehetőségünk lesz, hogy kitöltsük a sorokat, manuálisan vagy pedig automatikusan. A Get Posted Document Lines to Reverse funkciót használjuk, hogy egy vagy több dokumentumból lekérjük a kívánt sorokat. Ez a funkció egy az egyben visszavonja a költségét a lekért soroknak.</li>
+</ul>
+<p style="text-align:center;">  <img class="img-fluid" src="img/kep9.png" alig alt="10. ÁBRA SALES RETURN ORDER (FORRÁS: SAJÁT ÁBRA)"></p>
+                    <ul class="lead">
+          <li>5.  Megnyitjuk az előbb említett oldalt.</li>
+          <li>6.  Az oldal tetején kiválaszthatjuk, hogy csak azokat a sorokat mutassa, ahol nem az összes termék került visszaküldésre. </li>
+</ul>
+<p style="text-align:center;">  <img class="img-fluid" src="img/kep10.png" alig alt="11. ÁBRA POSTED SALES DOCUMENT LINES"></p>
+                    <ul class="lead">
+          <li>7.  Kiválasztjuk a Dokumentum típusát.</li>
+          <li>8.  Kiválasztjuk a sorokat, amiket az új dokumentumba szeretnék.</li>
+          <li>9. OK gombbal átmásoljuk a sorokat.</li>
+          <li>10. Miután visszadobott az előző oldalra, ki kell választani az okot, hogy miért kerül visszaküldésre a termék és, hogy melyik raktárba érkezik.</li>
+          <li>11. Post</li>
+</ul>
+<h2>6.1.5 Visszáruval kapcsolatos dokumentumok visszáru rendeléssel</h2>
+   <p class="lead">Lehet cserés rendelés, visszafizetéses rendelés, amik felmerülnek a visszáru folyamatában. Lehetőség van kezelni azokat a termékeket, amikre a forgalmazó garanciát vállal. </p>
+   <ul class="lead">
+          <li>1.  A Sales Return Order oldalon a Process fül alatt a Create Return-Related Documents-re kell kattintani.</li>
+          <li>2.  A Vendor No. mezőbe annak a kereskedőnek a számát kell beírni amelyiknek létre szeretnénk hozni a dokumentumot. </li>
+</ul>
+<p style="text-align:center;">  <img class="img-fluid" src="img/kep11.png" alig alt="12. ÁBRA CREATE RET.-RELATED DOCUMENTS (FORRÁS: SAJÁT ÁBRA)"></p>
+   <ul class="lead">
+          <li>3.  Hogyha a terméket vissza kell küldeni a kereskedőnek akkor a Create Purch. Ret. Order-t kell kiválasztani.</li>
+          <li>4.  Ha a terméket meg kell rendelni a kereskedőtől akkor a Create Purchase Order-t kell kiválasztani.</li>
+          <li>5.  Hogyha a terméket cseréhez kell rendelést létrehozni akkor pedig a Create Sales Order-t kell kiválasztani.</li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </section>    <section>   
+   <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">      
+            <h2>7.  Fejlesztésesek</h2>
+               <p class="lead">
+           <h2>7.1  Tábla</h2>
+   <p class="lead">
+A cél az volt, hogy egy olyan felületet, hozzak létre, ahol ki lehet listázni azokat a teljesített vásárlásokat, amelyeket adott esetben visszáruként tudunk kezelni.
+Ehhez először is létre kellett hoznom egy táblát, amiben azokat az adatokat tárolom amiket megszeretnék jeleníteni a keresés folyamán. Lesz egy elsődleges kulcs. Nagyon fontos tudni a rendelési számot mivel, ez az egyik elsődleges információ, amivel egy rendelést azonosítani tudunk. Fontos a megrendelő neve is, valamint a neve mellett az azonosító is. Maga termékről is szeretnénk információt ezért a tábla részét képezi a termék azonosítója, neve, és az, hogy hány darabot rendelt a vasasról az adott termékből. Kell még rendelés dátuma, és a termék főkönyvi száma. Az utolsó adat pedig az lesz, amiben megadhatjuk, hogy hány darab terméket szeretne a vásárló visszaküldeni.
+    </p>
+      <h2>7.2 Felhasználói felület</h2>
+        <p class="lead">A felhasználói felületen található két mező, amelyek segítségével tudunk szűrni a vásárlások között. A Customer Name mezőben a vásárló nevére tudunk szűrni, nem szükséges a teljes nevet beírni már névrészletre is lehetőség van szűrni. A Customer No. mezőben pedig értelemszerűen a vásárló azonosítójára lehet szűrni.
+Az eredmények egy táblázatban jelennek meg mezők alatt. Itt a tábla pont alatt felsorolt információk jelennek meg. Újra szeretnénk szűrni akkor a Delete-re kattintva kiürül a lenti lista és lehet megint szűrni.
+Maga a Page egy Worksheet, és egy temporális táblát használ.</p>
+<p style="text-align:center;">  <img class="img-fluid" src="img/kep12.png" alig alt="13. ÁBRA SZŰRÉS"></p>
+  <h2>7.3  Szűrési procedúra</h2>
+     <p class="lead">Megnyomva az enter vagy pedig a Find-ra kattintva lehet szűrni. A Page átadja a szűrési mezők tartalmát a függvények, valamint a temporális táblát. 4 másik táblát veszek még igénybe, hogy a fontosabb adatokat ki tudjam nyerni. A SalesShipmentHeader, SalesShipmentLine, ItemLedgerEntry, Item táblát. Ezeken kívül még egy Integer változó is kellett, amivel a sorok számát tudom megadni a temporális táblában.</p>
+     <p style="text-align:center;">  <img class="img-fluid" src="img/kep13.png" alig alt="14. ÁBRA KAPCSOLATOK A TÁBLÁK KÖZÖTT (FORRÁS: HTTP://SHANTANU-MSD-NAV.BLOGSPOT.COM/2014/09/MSD-NAV-TABLE-FIELD-RELATIONSHIP-PART-I.HTML)"></p>
+       <p class="lead">Annak függvényében, hogy mi alapján szűrűnk, többfelé ágazhat el a függvény. Ha a vásárló nevére keresünk rá akkor először a SalesShipmentHeader táblában kezd el keresni, hogy van-e olyan nevű vásárló, mint amire szűrni szeretnénk. Ez úgy néz ki, hogy kisbetűssé alakítja a keresési feltételt, a SalesShipmentHeader táblában is az éppen vizsgált vásárló nevét is. Majd a Cointans függvénnyel összeveti. Ha talált akkor SalesShipmentHeader táblán szűr a feltétellel. Ezután végig az imént említett táblán és a SalesShipmentLine táblát a Document No. kapcsolja össze a SalesShipmentHeader táblával. A következő, hogy a SHL táblán is végig megy a függvény. Itt az ItemLedgerEntry táblát szűkítjük a „Sale” típusokra. Ezután megint szűkít „Sales Shipment” -re, azért, mert csak azokra a termékekre vagyunk kíváncsiak, amik már a vásárlónál vannak hiszen csak azokat tudjuk visszáruzni. ITE össze kell még kapcsolni a SHL táblának a Document No.-val és a Line No.-val. Ezek után az ITE táblán végig haladva elkezdi feltölteni a temporális táblát a ciklus.</p>
+           <p style="text-align:center;">  <img class="img-fluid" src="img/kep14.png" alig alt="15. ÁBRA KÓD RÉSZLET (FORRÁS: SAJÁT ÁBRA)"></p> 
+        </div>
+      </div>
+    </div>
+</section>  <section id="contact"  class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+           <h2>8. Saját tapasztalatok</h2>
+           <p class="lead">
+           Mivel számomra javarészt ismeretlen terület volt a BC és a AL nyelv ezért azzal kezdtem, azzal kezdődött, hogy megnéztem jó pár anyagot a Dynamics 365 Business Central-al kapcsolatban [8]. Próbáltam megismerkedni a nyelvel és a környezettel. VS Code-ban installáltam az Extension Packot. Könnyedén ment az authentikáció a VS és a Dynamics 365 között. Miután minden összeállt és a VS Code által kreált kis „app” lefutott neki tudtam állni a feladatnak. Elkezdtem össze gyűjteni azokat az információkat amire szükség van egy visszárunál, majd ezek alapján összegyűjtöttem azokat a táblákat, amikre szükségem lehet. Megnéztem a Page Inspection segítségével, hogy a BC milyen táblákat használ, egy adott Page-en innen ez sok esetben segített. Az Item Ledger Entry-ből indultam ki, azokat az adatokat, amikre szükségem lehet megnéztem, hogy tudnám összekapcsolni az Item Ledger Entry-vel. Ehhez találtam, egy nagyon hasznos táblázatot [7] ahol megtaláltam azt, hogy mit mivel kell összekapcsolni. Amikor elkezdtem létrehozni a saját táblámat akkor, gyakran ránéztem BC alap tábláira, hogy megértsem azt, hogy hogyan épül fel egy tábla. Ugyan ezt volt, amikor a saját Page-em felépítésénél akadtam el. Próbáltam olyan alap Page-et keresni, ami hasónló ahhoz, amit én szeretnék létrehozni. Ami nehézséget okozott, hogy míg a korábbi programozási nyelvek esetében jóval nagyobb community foglalkozik ezáltal egy adott hibára, problémára több megoldás lehet találni a fórumokon, amíg AL esetében jóval kisebb a community, így jobban kell a Microsoft dokumentációjára hagyatkozni, ami nem feltétlenül egy rossz dolog, mert még inkább arra ösztönöz, hogy jobban megértsem az adott problémát. A debugolás nem okozott különösebb nehézséget, mind a VS Code mind a BC 365 kiválóan működött ezen a téren. Én személy szerint akkor kezdtem el megérteni programozási nyelv sajátosságait és magának a BC a felépítését amint elkezdtem vele dolgozni és megérteni azt, hogy az adott részt miért úgy kell megírni ahogy. 
+A célom mindenképpen az lenne, hogy a jövőben ezt továbbfejlesszem, valamint tovább bővítsem az a félév során megszerzett ismereteket. További mezőkkel lehetne kibővíteni a szűrési feltételeket, hogy minél több információ alapján ki lehessen szűrni a visszárukat. A szűrés által kapott listába további információkat is be lehetne tölteni, mint pl. a garancia időtartama stb. Létre lehetne hozni egy új felületet, ahol azt lehet megadni, hogy milyen okból lenne a visszáru, elállas, hibás termék, szállítás során sérült stb. Ami még mindenképpen szükséges lenne a jövőben az, hogy automatikusan kitöltse nekünk a modul a Sales Return Order oldalon található mezőket, ezáltal nagyságrendekkel megkönnyítve a munkát. Ezek mind olyan funkciók, amiket következő félévben a Szakdolgozat keretein belül meg lehet valósítani.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>   
+   <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">      
+            <h2>8.  Irodalomjegyzék</h2>
+               <ul class="lead">
+          <li>[1]https://dynamics.microsoft.com/en-us/erp/what-is-erp/</li>
+          <li>[2]https://www.oracle.com/erp/what-is-erp/</li>
+          <li>[3]https://dynamics.folio3.com/blog/open-source-enterprise-resource-planning-software/</li>
+          <li>[4]https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/deployment/multitenant-deployment-architecture</li>
+          <li>[5]https://docs.microsoft.com/en-us/dynamics365/business-central/sales-how-process-sales-returns-cancellations</li>
+          <li>[6]https://docs.microsoft.com/en-us/dynamics365/business-central/sales-how-process-sales-returns-orders</li>
+          <li>[7]http://shantanu-msd-nav.blogspot.com/2014/09/msd-nav-table-field-relationship-part-i.html</li>
+          <li>[8]https://www.packtpub.com/product/dynamics-365-business-central-development-quick-start-guide/9781789347463</li>
+</ul>
+        </div>
+      </div>
+    </div>
+</section>
+                                                              
+  <footer class="py-5 bg-dark">
+    <div class="container">
+    </div>
+
+  </footer>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+ 
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>

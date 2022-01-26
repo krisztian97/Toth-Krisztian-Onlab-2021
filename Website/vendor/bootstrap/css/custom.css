@@ -1,0 +1,16 @@
+header {
+  background-color: #878787; 
+
+}
+.bg-primary {
+  background-color: #878787!important; 
+
+}
+section{
+	padding: 50px;
+}
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
